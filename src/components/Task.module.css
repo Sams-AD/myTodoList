@@ -1,0 +1,20 @@
+.task
+{
+    display:grid;
+    grid-template-columns:1rem 40rem 1rem ;
+    align-items: flex-start;
+    gap: .75rem;
+    background: var(--Gray-500);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.task p {
+    color:var(--Gray-100);
+}
+
+.task svg
+{
+    cursor: pointer;
+}
+     

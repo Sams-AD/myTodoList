@@ -1,0 +1,28 @@
+.taskHeader
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8125rem;
+
+    width: 100%;
+    height: 12.5rem;
+    background:var(--Gray-700);
+}
+
+.logo
+{
+    color: var(--Blue);
+    
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.logoDo
+{
+    color: var(--PurpleDark);
+}
+
+
+
+

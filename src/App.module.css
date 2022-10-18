@@ -1,0 +1,95 @@
+.taskContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: center;
+    gap: 4rem;
+
+}
+
+.form {
+    width: 46rem;
+    height: 3rem;
+    display: grid;
+    grid-template-columns: 39.875rem 5.625rem;
+    gap: .5rem;
+    margin-top: -1.5rem;
+}
+.form input
+{
+    background: var(--Gray-500);
+    color: var(--Gray-300);
+    outline: 1 px solid var(--Gray-700);
+}
+
+.form button
+{
+    background: var(--BlueDark);
+    color: var(--Gray-100);
+}
+.form input, .form button {
+    border-radius: 8px;
+    border: none;
+}
+
+.taskWrapper
+{
+    width: 46rem;
+}
+
+.taskWrapper header
+{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.taskWrapper header p
+{
+    color: var(--Blue);
+    font-weight: 700;
+    font-size: .875rem;
+}
+
+.taskWrapper header p:last-child
+{
+    color: var(--Purple);
+}
+
+.taskWrapper header p span
+{
+    background: var(--Gray-400);
+    color: var(--Gray-200);
+    padding: .2rem .5rem;
+    border-radius: 999px;
+    margin-left: .5rem;
+}
+
+.taskList
+{
+    border-top: 1px solid var(--Gray-400);
+    margin-top: 1.5rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    gap:.75rem;
+
+   
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+}
+
+
+.taskList p
+{
+    color: var(--Gray-300);
+}
+
+.taskList svg 
+{
+    margin-bottom: 1rem;
+    
+}
