@@ -60,6 +60,36 @@ export function App(){
         setCreatedTaskCount(createdTaskCount-1)
     }
 
+    function renderTask(){
+        
+        if(createdTaskCount > 0)
+        {
+            return(
+                tasks.map(task => {
+                    return(
+                       <Task key={task.id} taskText = {task.taskText} isComplete = {task.isComplete} handleCheckedChange = {() => handleCheckedChange(task.id)} handleDeleteTask={()=> handleDeleteTask(task.id)}/>
+                    )
+                  }) 
+            )
+            
+        }
+        else
+        {
+            return(
+                <>
+                <Clipboard size={56} color="var(--Gray-400)"/>
+
+                <div className={styles.contentSize}>
+                    <p><strong>Você ainda não tem tarefas cadastradas</strong> </p>
+                    <p>Crie tarefas e organize seus itens a fazer</p>
+                </div>
+            </>
+
+            )
+            
+        }
+    }
+
 
 
     return(
@@ -67,7 +97,7 @@ export function App(){
             <Header/>
             <div className={styles.taskContainer}>
                 <form className={styles.form} onSubmit={handleCreateNewTask}>
-                    <input type="text" name='txt_task' value = {newTask} onChange={handleNewTextChange}/>
+                    <input type="text" name='txt_task' value = {newTask} onChange={handleNewTextChange} placeholder="Adicione uma nova tarefa"/>
                     <button type='submit'>Criar <strong><span>+</span></strong></button>
                 </form>
 
@@ -79,11 +109,7 @@ export function App(){
 
                     <div className={styles.taskList}>
                        {
-                           tasks.map(task => {
-                             return(
-                                <Task key={task.id} taskText = {task.taskText} isComplete = {task.isComplete} handleCheckedChange = {() => handleCheckedChange(task.id)} handleDeleteTask={()=> handleDeleteTask(task.id)}/>
-                             )
-                           }) 
+                            renderTask()
                        }
                     </div>
                 </div>

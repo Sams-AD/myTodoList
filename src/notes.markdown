@@ -15,3 +15,13 @@ import { USERWHITESPACABLE_TYPES } from "@babel/types"
 # Array, object destruturing
 # condicional rendering
 # condicional style
+
+    if(createdTaskCount > 0)
+                            {
+                                tasks.map(task => {
+                                  return(
+                                     <Task key={task.id} taskText = {task.taskText} isComplete = {task.isComplete} handleCheckedChange = {() => handleCheckedChange(task.id)} handleDeleteTask={()=> handleDeleteTask(task.id)}/>
+                                  )
+                                }) 
+                            }
+                            

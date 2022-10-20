@@ -21,6 +21,9 @@
     background: var(--Gray-500);
     color: var(--Gray-300);
     outline: 1 px solid var(--Gray-700);
+    padding: 16px;
+    text-indent: .3rem;
+    font-size: 1rem;
 }
 
 .form button
@@ -93,3 +96,4 @@
     margin-bottom: 1rem;
     
 }
+
